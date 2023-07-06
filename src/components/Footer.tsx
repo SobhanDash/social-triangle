@@ -9,7 +9,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className={`w-full py-6 px-6 sm:px-12 md:px-20 flex flex-col md_link:flex-row gap-y-10 md_link:gap-0 justify-between items-start bg-mainBg`}>
+    <div className={`w-full py-10 px-6 sm:px-12 md:px-20 
+        flex flex-col md_link:flex-row gap-y-10 md_link:gap-y-0 justify-between items-start 
+        bg-mainBg bg-cover bg-center bg-no-repeat`}>
         <div className={`flex flex-col justify-start items-start gap-6`}>
             <div className={`flex justify-start items-end gap-2`}>
                 <div className={`relative h-8 w-8`}>
@@ -20,23 +22,23 @@ const Footer = () => {
 
             <div className={`flex justify-start items-start gap-4`}>
                 <Link href={``} target="_blank">
-                    <BsLinkedin className={`text-3xl text-[#fff]`} />
+                    <BsLinkedin className={`text-2xl  text-[#fff]`} />
                 </Link>
 
                 <Link href={``} target="_blank">
-                    <BsInstagram className={`text-3xl text-[#fff]`} />
+                    <BsInstagram className={`text-2xl  text-[#fff]`} />
                 </Link>
 
                 <Link href={``} target="_blank">
-                    <BsTwitter className={`text-3xl text-[#fff]`} />
+                    <BsTwitter className={`text-2xl  text-[#fff]`} />
                 </Link>
 
                 <Link href={``} target="_blank">
-                    <FaMedium className={`text-3xl text-[#fff]`} />
+                    <FaMedium className={`text-2xl  text-[#fff]`} />
                 </Link>
 
                 <Link href={``} target="_blank">
-                    <BsFacebook className={`text-3xl text-[#fff]`} />
+                    <BsFacebook className={`text-2xl  text-[#fff]`} />
                 </Link>
             </div>
 

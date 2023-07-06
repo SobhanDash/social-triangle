@@ -1,33 +1,102 @@
-'use client'
+"use client";
 
+import axios from "axios";
 import React, { HtmlHTMLAttributes, useState } from "react";
 import { toast } from "react-toastify";
 
 const LetsChat = () => {
-  const [chatDetails, setChatDetails] = useState({fname: "", lname: "", email: "", message: ""});
+  const [chatDetails, setChatDetails] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    message: "",
+  });
 
-  const onChangeHandler = (e:React.ChangeEvent<HTMLInputElement>)=> {
+  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     e.preventDefault();
-    const {name, value} = e.target;
-    setChatDetails({...chatDetails, [name]: value});
-  }
+    const { name, value } = e.target;
+    setChatDetails({ ...chatDetails, [name]: value });
+  };
 
-  const isEmpty = (str:String):boolean=> {
-    if(str.replace("/\s/g","").trim().length === 0) {
+  const isEmpty = (str: String): boolean => {
+    if (str.replace("/s/g", "").trim().length === 0) {
       return true;
     }
     return false;
-  }
+  };
 
-  const onSubmitHandler = (e:React.FormEvent<HTMLFormElement>)=> {
+  const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
-    const {fname, lname, email, message} = chatDetails;
-    if(!isEmpty(fname) && !isEmpty(lname) && emailRegex.test(email) && !isEmpty(message)) {
-      // API Call
-    }
-    else if(isEmpty(fname)) {
-      toast.error("First name cannot be empty!", {
+    try {
+      const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+      const { fname, lname, email, message } = chatDetails;
+      if (
+        !isEmpty(fname) &&
+        !isEmpty(lname) &&
+        emailRegex.test(email) &&
+        !isEmpty(message)
+      ) {
+        const {data} = await axios.post("http://localhost:3000/api/sendEmail", {
+          fname,
+          lname,
+          email,
+          message,
+        });
+        if (data.success) {
+          toast.success("Message sent!", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          setChatDetails({fname: "", lname: "", email: "", message: ""});
+        }
+      } else if (isEmpty(fname)) {
+        toast.error("First name cannot be empty!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } else if (isEmpty(lname)) {
+        toast.error("Last name cannot be empty!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } else if (!emailRegex.test(email)) {
+        toast.error("Invalid email!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } else {
+        toast.error("Message cannot be empty!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    } catch (error: any) {
+      toast.error(error.response.data.error, {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -37,40 +106,7 @@ const LetsChat = () => {
         progress: undefined,
       });
     }
-    else if(isEmpty(lname)) {
-      toast.error("Last name cannot be empty!", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
-    else if(!emailRegex.test(email)) {
-      toast.error("Invalid email!", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
-    else {
-      toast.error("Message cannot be empty!", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
-  }
+  };
 
   return (
     <div
@@ -117,6 +153,7 @@ const LetsChat = () => {
 
         <div className={`col-span-12 md_link:col-span-5`}>
           <form
+            onSubmit={onSubmitHandler}
             className={`w-full sm1:w-[70%] md_link:w-full lg1:w-[90%] md_link:mx-auto flex flex-col justify-start items-start gap-6`}
           >
             <div
@@ -126,30 +163,34 @@ const LetsChat = () => {
                 Name <span>{`(required)`}</span>
               </p>
               <div className={`w-full grid grid-cols-12 gap-y-4 sm1:gap-x-4`}>
-                <div className={`col-span-12 sm1:col-span-6 flex flex-col justify-start items-start gap-y-2`}>
-                  <label htmlFor="fname">
-                    First Name
-                  </label>
-                    <input
+                <div
+                  className={`col-span-12 sm1:col-span-6 flex flex-col justify-start items-start gap-y-2`}
+                >
+                  <label htmlFor="fname">First Name</label>
+                  <input
                     type="text"
                     name="fname"
                     id="fname"
                     placeholder="First Name"
+                    value={chatDetails.fname}
+                    onChange={onChangeHandler}
                     className={`w-full text-black py-2 px-4 outline-none`}
-                    />
+                  />
                 </div>
 
-                <div className={`col-span-12 sm1:col-span-6 flex flex-col justify-start items-start gap-y-2`}>
-                  <label htmlFor="lname">
-                    Last Name
-                  </label>
-                    <input
+                <div
+                  className={`col-span-12 sm1:col-span-6 flex flex-col justify-start items-start gap-y-2`}
+                >
+                  <label htmlFor="lname">Last Name</label>
+                  <input
                     type="text"
                     name="lname"
                     id="lname"
+                    value={chatDetails.lname}
+                    onChange={onChangeHandler}
                     placeholder="Last Name"
                     className={`w-full text-black py-2 px-4 outline-none`}
-                    />
+                  />
                 </div>
               </div>
             </div>
@@ -165,6 +206,8 @@ const LetsChat = () => {
                 name="email"
                 id="email"
                 placeholder="Email"
+                value={chatDetails.email}
+                onChange={onChangeHandler}
                 className={`w-full text-black py-2 px-4 outline-none`}
               />
             </div>
@@ -179,11 +222,13 @@ const LetsChat = () => {
                 name="message"
                 id="message"
                 placeholder="Message"
+                value={chatDetails.message}
+                onChange={onChangeHandler}
                 className={`h-[100px] w-full text-black py-2 px-4 resize-none outline-none`}
               />
             </div>
 
-            <button className={`py-3 px-6 text-white rounded-lg bg-[#5E17EB]`}>
+            <button type="submit" className={`py-3 px-6 text-white rounded-lg bg-[#5E17EB]`}>
               Send
             </button>
           </form>
