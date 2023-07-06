@@ -14,7 +14,7 @@ const Navbar = () => {
       className={`lg:w-[95%] xl1:w-[90%] mx-auto flex flex-col justify-start items-start`}
     >
       <div
-        className={`w-full flex justify-between items-center bg-transparent`}
+        className={`w-full py-2 flex justify-between items-center bg-transparent`}
       >
         <div className={`flex justify-start items-end gap-2`}>
           <div className={`relative h-8 w-8 md:h-10 md:w-10`}>
