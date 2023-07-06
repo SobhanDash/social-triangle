@@ -14,7 +14,7 @@ const Navbar = () => {
       className={`lg:w-[95%] xl1:w-[90%] mx-auto flex flex-col justify-start items-start`}
     >
       <div
-        className={`w-full py-2 flex justify-between items-center bg-transparent`}
+        className={`w-full flex justify-between items-center bg-transparent`}
       >
         <div className={`flex justify-start items-end gap-2`}>
           <div className={`relative h-8 w-8 md:h-10 md:w-10`}>
@@ -57,9 +57,10 @@ const Navbar = () => {
           />
         )}
       </div>
+
       <div
         className={`${showMenu ? "max-h-[170px] z-[1] opacity-1" : "max-h-0 z-[-1]"} 
-        w-full p-4 flex md_link:hidden flex-col justify-start items-start rounded-md transition-all`}
+        w-full flex md_link:hidden flex-col justify-start items-start rounded-md transition-all`}
       >
         <Link
           href={`#`}
