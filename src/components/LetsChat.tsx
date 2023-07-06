@@ -12,7 +12,9 @@ const LetsChat = () => {
     message: "",
   });
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const onChangeHandler = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     e.preventDefault();
     const { name, value } = e.target;
     setChatDetails({ ...chatDetails, [name]: value });
@@ -27,6 +29,7 @@ const LetsChat = () => {
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     try {
       const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
       const { fname, lname, email, message } = chatDetails;
@@ -36,12 +39,18 @@ const LetsChat = () => {
         emailRegex.test(email) &&
         !isEmpty(message)
       ) {
-        const {data} = await axios.post("http://localhost:3000/api/sendEmail", {
-          fname,
-          lname,
-          email,
-          message,
-        });
+        const { data } = await axios.post(
+          "http://localhost:3000/api/sendEmail",
+          {
+            fname,
+            lname,
+            email,
+            message,
+          }
+        );
+
+        console.log("Data:", data);
+
         if (data.success) {
           toast.success("Message sent!", {
             position: "top-right",
@@ -52,7 +61,7 @@ const LetsChat = () => {
             draggable: true,
             progress: undefined,
           });
-          setChatDetails({fname: "", lname: "", email: "", message: ""});
+          setChatDetails({ fname: "", lname: "", email: "", message: "" });
         }
       } else if (isEmpty(fname)) {
         toast.error("First name cannot be empty!", {
@@ -228,7 +237,10 @@ const LetsChat = () => {
               />
             </div>
 
-            <button type="submit" className={`py-3 px-6 text-white rounded-lg bg-[#5E17EB]`}>
+            <button
+              type="submit"
+              className={`py-3 px-6 text-white rounded-lg bg-[#5E17EB]`}
+            >
               Send
             </button>
           </form>

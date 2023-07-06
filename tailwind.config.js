@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
+  mode: "jit",
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     screens: {
@@ -27,24 +27,28 @@ module.exports = {
       "5xl": "2140px",
     },
     radialGradients: {
-      'industriesGradient': 'radial-gradient(at top left, #0a0a0ac9 60%, #ffffff00 100%)',
+      industriesGradient:
+        "radial-gradient(at top left, #0a0a0ac9 60%, #ffffff00 100%)",
     },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'mainBg': 'url(/assets/mainBg.png)',
-        'industriesBg': 'url(/assets/industriesBg.jpg)',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        mainBg: "url(/assets/mainBg.png)",
+        industriesBg: "url(/assets/industriesBg.jpg)",
       },
       dropShadow: {
-        bannerShadow: "0.1rem 0.1rem lightgray"
+        bannerShadow: "0.1rem 0.1rem lightgray",
       },
       boxShadow: {
         menuShadow: "0px 1px 2px 0px #9099ff",
         btnShadow: "0px 1px 3px 0px #5b65d1",
-      }
+      },
+      fontSize: {
+        "8xl": "100px", // Add a custom text size with the class "text-8xl"
+      },
     },
   },
   plugins: [],
-}
+};

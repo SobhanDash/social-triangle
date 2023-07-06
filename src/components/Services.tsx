@@ -3,9 +3,17 @@
 import React from "react";
 import { BiSolidVideos } from "react-icons/bi";
 import { AiFillCopyrightCircle } from "react-icons/ai";
-import { MdEditSquare, MdManageAccounts } from "react-icons/md";
+import { MdEditSquare, MdOutlineManageAccounts } from "react-icons/md";
 import { TbSettingsAutomation } from "react-icons/tb";
 import { SiMicrostrategy } from "react-icons/si";
+import {
+  PiVideoThin,
+  PiPenNibThin,
+  PiShapesThin,
+  PiRobotThin,
+  PiScissorsThin,
+  PiStrategyThin,
+} from "react-icons/pi";
 
 const Services = () => {
   return (
@@ -30,7 +38,7 @@ const Services = () => {
           <div
             className={`h-[200px] p-4 flex flex-col justify-center items-center gap-2 bg-[#fff]`}
           >
-            <BiSolidVideos className={`text-4xl text-[#5E17EB]`} />
+            <PiVideoThin className={`text-8xl text-[#5E17EB]`} />
             <p className={`text-xl text-[#5E17EB] font-semibold`}>
               Video Content
             </p>
@@ -49,7 +57,7 @@ const Services = () => {
           <div
             className={`h-[200px] p-4 flex flex-col justify-center items-center gap-2 bg-[#fff]`}
           >
-            <AiFillCopyrightCircle className={`text-4xl text-[#5E17EB]`} />
+            <PiPenNibThin className={`text-8xl text-[#5E17EB]`} />
             <p className={`text-xl text-[#5E17EB] font-semibold`}>
               Copywriting
             </p>
@@ -68,7 +76,7 @@ const Services = () => {
           <div
             className={`h-[200px] p-4 flex flex-col justify-center items-center gap-2 bg-[#fff]`}
           >
-            <MdManageAccounts className={`text-4xl text-[#5E17EB]`} />
+            <PiShapesThin className={`text-8xl text-[#5E17EB]`} />
             <p className={`text-xl text-[#5E17EB] font-semibold`}>Management</p>
             <p className={`text-[#100F0D] text-center`}>
               Get freed from tedious work
@@ -85,7 +93,7 @@ const Services = () => {
           <div
             className={`h-[200px] p-4 flex flex-col justify-center items-center gap-2 bg-[#fff]`}
           >
-            <TbSettingsAutomation className={`text-4xl text-[#5E17EB]`} />
+            <PiRobotThin className={`text-8xl text-[#5E17EB]`} />
             <p className={`text-xl text-[#5E17EB] font-semibold`}>Automation</p>
             <p className={`text-[#100F0D] text-center`}>
               Save time & money with automation
@@ -102,7 +110,7 @@ const Services = () => {
           <div
             className={`h-[200px] p-4 flex flex-col justify-center items-center gap-2 bg-[#fff]`}
           >
-            <MdEditSquare className={`text-4xl text-[#5E17EB]`} />
+            <PiScissorsThin className={`text-8xl text-[#5E17EB]`} />
             <p className={`text-xl text-[#5E17EB] font-semibold`}>Editing</p>
             <p className={`text-[#100F0D] text-center`}>
               Delegate content editing to experts
@@ -119,7 +127,7 @@ const Services = () => {
           <div
             className={`h-[200px] p-4 flex flex-col justify-center items-center gap-2 bg-[#fff]`}
           >
-            <SiMicrostrategy className={`text-4xl text-[#5E17EB]`} />
+            <PiStrategyThin className={`text-8xl text-[#5E17EB]`} />
             <p className={`text-xl text-[#5E17EB] font-semibold`}>Strategies</p>
             <p className={`text-[#100F0D] text-center`}>
               Boost profits with proven strategies
