@@ -1,8 +1,77 @@
 'use client'
 
-import React from "react";
+import React, { HtmlHTMLAttributes, useState } from "react";
+import { toast } from "react-toastify";
 
 const LetsChat = () => {
+  const [chatDetails, setChatDetails] = useState({fname: "", lname: "", email: "", message: ""});
+
+  const onChangeHandler = (e:React.ChangeEvent<HTMLInputElement>)=> {
+    e.preventDefault();
+    const {name, value} = e.target;
+    setChatDetails({...chatDetails, [name]: value});
+  }
+
+  const isEmpty = (str:String):boolean=> {
+    if(str.replace("/\s/g","").trim().length === 0) {
+      return true;
+    }
+    return false;
+  }
+
+  const onSubmitHandler = (e:React.FormEvent<HTMLFormElement>)=> {
+    e.preventDefault();
+    const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+    const {fname, lname, email, message} = chatDetails;
+    if(!isEmpty(fname) && !isEmpty(lname) && emailRegex.test(email) && !isEmpty(message)) {
+      // API Call
+    }
+    else if(isEmpty(fname)) {
+      toast.error("First name cannot be empty!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+    else if(isEmpty(lname)) {
+      toast.error("Last name cannot be empty!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+    else if(!emailRegex.test(email)) {
+      toast.error("Invalid email!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+    else {
+      toast.error("Message cannot be empty!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  }
+
   return (
     <div
       className={`min-h-[100vh] w-full py-20 px-6 sm:px-12 md:px-20 text-white
@@ -65,6 +134,7 @@ const LetsChat = () => {
                     type="text"
                     name="fname"
                     id="fname"
+                    placeholder="First Name"
                     className={`w-full text-black py-2 px-4 outline-none`}
                     />
                 </div>
@@ -77,6 +147,7 @@ const LetsChat = () => {
                     type="text"
                     name="lname"
                     id="lname"
+                    placeholder="Last Name"
                     className={`w-full text-black py-2 px-4 outline-none`}
                     />
                 </div>
@@ -93,6 +164,7 @@ const LetsChat = () => {
                 type="email"
                 name="email"
                 id="email"
+                placeholder="Email"
                 className={`w-full text-black py-2 px-4 outline-none`}
               />
             </div>
@@ -106,6 +178,7 @@ const LetsChat = () => {
               <textarea
                 name="message"
                 id="message"
+                placeholder="Message"
                 className={`h-[100px] w-full text-black py-2 px-4 resize-none outline-none`}
               />
             </div>

@@ -3,6 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import iconImg from "../../public/assets/icon.png";
+import { BsLinkedin, BsInstagram, BsTwitter, BsFacebook } from 'react-icons/bs';
+import { FaMedium } from 'react-icons/fa';
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -15,9 +18,27 @@ const Footer = () => {
                 <p className={`text-2xl text-[#fff] font-semibold`}>The Social Triangle</p>
             </div>
 
-            <p className={`w-auto md_link:w-[400px] text-black py-2 px-4 font-[500] bg-[#d9d9d9]`}>
-                Add Social Media Icons in this space for LinkedIn, Instagram, twitter, medium, facebook
-            </p>
+            <div className={`flex justify-start items-start gap-4`}>
+                <Link href={``} target="_blank">
+                    <BsLinkedin className={`text-3xl text-[#fff]`} />
+                </Link>
+
+                <Link href={``} target="_blank">
+                    <BsInstagram className={`text-3xl text-[#fff]`} />
+                </Link>
+
+                <Link href={``} target="_blank">
+                    <BsTwitter className={`text-3xl text-[#fff]`} />
+                </Link>
+
+                <Link href={``} target="_blank">
+                    <FaMedium className={`text-3xl text-[#fff]`} />
+                </Link>
+
+                <Link href={``} target="_blank">
+                    <BsFacebook className={`text-3xl text-[#fff]`} />
+                </Link>
+            </div>
 
             <p className={`text-[#A1A1A1]`}>
                 Copyright © All Rights Reserved. 2023
