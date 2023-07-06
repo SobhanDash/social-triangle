@@ -9,7 +9,7 @@ import hubSPot from "../../public/assets/hubSpot.svg";
 import Pr from "../../public/assets/premierPro.svg";
 import Ps from "../../public/assets/photoshop.svg";
 import Ae from "../../public/assets/afterEffects.svg";
-import loom from "../../public/assets/Loom.svg";
+import loom from "../../public/assets/loom.svg";
 import zoho from "../../public/assets/zoho.svg";
 import airtable from "../../public/assets/airtable.png";
 import drive from "../../public/assets/googleDrive.svg";
