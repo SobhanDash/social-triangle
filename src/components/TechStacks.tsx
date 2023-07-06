@@ -64,7 +64,7 @@ const TechStacks = () => {
             <div
               className={`mb-4 flex flex-col justify-start items-start gap-2`}
             >
-              <p className={`text-xl xs:text-2xl sm:text-2xl md:text-3xl font-semibold`}>
+              <p className={`text-xl text-black xs:text-2xl sm:text-2xl md:text-3xl font-semibold`}>
                 Let us be a part of your startup journey!
               </p>
               <p className={`text-sm text-[#818181] font-semibold`}>

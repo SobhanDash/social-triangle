@@ -15,7 +15,7 @@ const Footer = () => {
                 <p className={`text-2xl text-[#fff] font-semibold`}>The Social Triangle</p>
             </div>
 
-            <p className={`w-auto md_link:w-[400px] py-2 px-4 font-[500] bg-[#d9d9d9]`}>
+            <p className={`w-auto md_link:w-[400px] text-black py-2 px-4 font-[500] bg-[#d9d9d9]`}>
                 Add Social Media Icons in this space for LinkedIn, Instagram, twitter, medium, facebook
             </p>
 
