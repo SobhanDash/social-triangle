@@ -7,7 +7,7 @@ const LetsChat = () => {
     <div
       className={`min-h-[100vh] w-full py-20 px-6 sm:px-12 md:px-20 text-white
         flex justify-center items-center
-        bg-mainBg`}
+        bg-mainBg bg-cover bg-center bg-no-repeat`}
     >
       <div
         className={`grid grid-cols-12 justify-start items-start gap-y-8 md_link:gap-x-8`}
@@ -65,7 +65,7 @@ const LetsChat = () => {
                     type="text"
                     name="fname"
                     id="fname"
-                    className={`w-full py-2 px-4 outline-none`}
+                    className={`w-full text-black py-2 px-4 outline-none`}
                     />
                 </div>
 
@@ -77,7 +77,7 @@ const LetsChat = () => {
                     type="text"
                     name="lname"
                     id="lname"
-                    className={`w-full py-2 px-4 outline-none`}
+                    className={`w-full text-black py-2 px-4 outline-none`}
                     />
                 </div>
               </div>
@@ -93,7 +93,7 @@ const LetsChat = () => {
                 type="email"
                 name="email"
                 id="email"
-                className={`w-full py-2 px-4 outline-none`}
+                className={`w-full text-black py-2 px-4 outline-none`}
               />
             </div>
 
@@ -106,7 +106,7 @@ const LetsChat = () => {
               <textarea
                 name="message"
                 id="message"
-                className={`h-[100px] w-full py-2 px-4 resize-none outline-none`}
+                className={`h-[100px] w-full text-black py-2 px-4 resize-none outline-none`}
               />
             </div>
 
