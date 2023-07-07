@@ -40,7 +40,7 @@ const LetsChat = () => {
         !isEmpty(message)
       ) {
         const { data } = await axios.post(
-          "http://localhost:3000/api/sendEmail",
+          "/api/sendEmail",
           {
             fname,
             lname,
@@ -48,8 +48,6 @@ const LetsChat = () => {
             message,
           }
         );
-
-        console.log("Data:", data);
 
         if (data.success) {
           toast.success("Message sent!", {
