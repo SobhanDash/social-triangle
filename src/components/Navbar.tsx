@@ -7,7 +7,7 @@ import iconImg from "../../public/assets/icon.png";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
-const Navbar = () => {
+const Navbar = ({scrollToLetsChat}:any) => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <div
@@ -27,21 +27,21 @@ const Navbar = () => {
 
         <div className={`hidden md_link:flex justify-start items-center gap-4`}>
           <Link
-            href={`#`}
+            href={`/`}
             className={`p-2 hover:border-b border-b-[#5E17EB] transition-all`}
           >
             HOME
           </Link>
-          <Link
-            href={`#`}
+          {/* <Link
+            href={`/about`}
             className={`p-2 hover:border-b border-b-[#5E17EB] transition-all`}
           >
             ABOUT
-          </Link>
+          </Link> */}
           <button
             className={`py-2 px-4 border border-[#5E17EB] hover:bg-[#5E17EB] rounded-md transition-all`}
           >
-            <Link href={`#`}>BOOK A CALL</Link>
+            BOOK A CALL
           </button>
         </div>
 
@@ -63,21 +63,22 @@ const Navbar = () => {
         w-full flex md_link:hidden flex-col justify-start items-start gap-2 rounded-md transition-all`}
       >
         <Link
-          href={`#`}
+          href={`/`}
           className={`p-2 hover:border-b border-b-[#5E17EB] transition-all`}
         >
           HOME
         </Link>
-        <Link
-          href={`#`}
+        {/* <Link
+          href={`/about`}
           className={`p-2 hover:border-b border-b-[#5E17EB] transition-all`}
         >
           ABOUT
-        </Link>
+        </Link> */}
         <button
+          onClick={scrollToLetsChat}
           className={`py-2 px-4 border border-[#5E17EB] hover:bg-[#5E17EB] rounded-md transition-all`}
         >
-          <Link href={`#`}>BOOK A CALL</Link>
+          BOOK A CALL
         </button>
       </div>
     </div>

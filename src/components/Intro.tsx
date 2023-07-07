@@ -11,7 +11,7 @@ const Intro = ({letsChatRef}:any) => {
 
   return (
     <div className={`min-h-[80vh] w-full py-12 px-6 sm:px-12 md:px-20 text-white bg-mainBg`}>
-      <Navbar />
+      <Navbar scrollToLetsChat={scrollToLetsChat} />
       <div
         className={`lg:h-[40vh] lg1:h-[45vh] xl1:h-[50vh] 
         w-full lg:w-[95%] xl1:w-[90%] mt-16 md_link:mt-10 mx-auto 
