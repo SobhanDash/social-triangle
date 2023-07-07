@@ -64,13 +64,13 @@ const Navbar = () => {
       >
         <Link
           href={`#`}
-          className={`p-2`}
+          className={`p-2 hover:border-b border-b-[#5E17EB] transition-all`}
         >
           HOME
         </Link>
         <Link
           href={`#`}
-          className={`p-2`}
+          className={`p-2 hover:border-b border-b-[#5E17EB] transition-all`}
         >
           ABOUT
         </Link>
