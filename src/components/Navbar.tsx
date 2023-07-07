@@ -7,7 +7,7 @@ import iconImg from "../../public/assets/icon.png";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
-const Navbar = ({scrollToLetsChat}:any) => {
+const Navbar = ({ scrollToLetsChat }: any) => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <div
@@ -59,7 +59,9 @@ const Navbar = ({scrollToLetsChat}:any) => {
       </div>
 
       <div
-        className={`${showMenu ? "max-h-[170px] z-[1] opacity-1" : "max-h-0 z-[-1]"} 
+        className={`${
+          showMenu ? "max-h-[170px] z-[1] opacity-1" : "max-h-0 z-[-1]"
+        } 
         w-full flex md_link:hidden flex-col justify-start items-start gap-2 rounded-md transition-all`}
       >
         <Link
