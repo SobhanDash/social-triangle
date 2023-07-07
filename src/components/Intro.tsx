@@ -3,7 +3,12 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-const Intro = () => {
+const Intro = ({letsChatRef}:any) => {
+  
+  const scrollToLetsChat = ()=> {
+    letsChatRef?.current?.scrollIntoView({behavior: "smooth"});
+  }
+
   return (
     <div className={`min-h-[80vh] w-full py-12 px-6 sm:px-12 md:px-20 text-white bg-mainBg`}>
       <Navbar />
@@ -24,7 +29,7 @@ const Intro = () => {
             for <span className={`text-[#f04828]`}>YOU</span>.
           </p>
 
-          <button className={`py-3 px-6 text-[#fff] rounded-md bg-[#5E17EB]`}>
+          <button className={`py-3 px-6 text-[#fff] rounded-md bg-[#5E17EB]`} onClick={scrollToLetsChat}>
             Let&apos;s Chat
           </button>
         </div>

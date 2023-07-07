@@ -1,10 +1,10 @@
 "use client";
 
 import axios from "axios";
-import React, { HtmlHTMLAttributes, useState } from "react";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 
-const LetsChat = () => {
+const LetsChat = ({letsChatRef}:any) => {
   const [chatDetails, setChatDetails] = useState({
     fname: "",
     lname: "",
@@ -117,6 +117,7 @@ const LetsChat = () => {
 
   return (
     <div
+      ref={letsChatRef}
       className={`min-h-[100vh] w-full py-20 px-6 sm:px-12 md:px-20 text-white
         flex justify-center items-center
         bg-mainBg bg-cover bg-center bg-no-repeat`}
