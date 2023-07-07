@@ -31,8 +31,8 @@ export async function POST(req: NextRequest) {
     };
 
     const transporter = nodemailer.createTransport({
-      service: "smtp.zoho.in",
-      port: 465 | 587 | 25,
+      host: "smtp.zoho.in",
+      port: 465,
       secure: true,
       auth: {
         user: process.env.NODE_MAILER_EMAIL,
