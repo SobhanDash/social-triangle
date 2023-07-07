@@ -30,16 +30,16 @@ const Faqs = () => {
 
         <FaqContent
           title={`Why you should hire a marketing agency?`}
-          description={`Marketing agencies help companies to implement their marketing strategies. They offer a wide array of services such as – marketing strategy, website, content creation, design, social media management, search engine marketing (SEM), search engine optimization (SEO), and more.
+          description={[`Marketing agencies help companies to implement their marketing strategies. They offer a wide array of services such as – marketing strategy, website, content creation, design, social media management, search engine marketing (SEM), search engine optimization (SEO), and more.`,
           
-          Finding the right agency for your marketing needs is very crucial. The right agency could become your growth partner that helps you achieve your business goals swiftly.
+          `Finding the right agency for your marketing needs is very crucial. The right agency could become your growth partner that helps you achieve your business goals swiftly.`,
 
-          Because of their expertise in the online marketing space, marketing agencies can help you identify the most viable channels to increase leads and conversions. The strategise and implement marketing strategies that best suit your needs.
+          `Because of their expertise in the online marketing space, marketing agencies can help you identify the most viable channels to increase leads and conversions. The strategise and implement marketing strategies that best suit your needs.`,
 
-          A marketing agency can help you save loads of time and money. The marketing experts know what works and what doesn’t. This will help you save a lot of extra hours of experimentation.
-          And they create and implement marketing ideas that work best for your business. You don’t have to spend any extra money on hiring those highly skilled marketing professionals.
+          `A marketing agency can help you save loads of time and money. The marketing experts know what works and what doesn’t. This will help you save a lot of extra hours of experimentation.`,
+          `And they create and implement marketing ideas that work best for your business. You don’t have to spend any extra money on hiring those highly skilled marketing professionals.`,
           
-          The marketing space is highly dynamic and evolving. You need to stay updated about the latest martech in order to be competitive. As a business owner, this might be difficult. Hiring a marketing agency can solve this problem for you. They know of the latest marketing technologies and have expertise in the implementation.`}
+          `The marketing space is highly dynamic and evolving. You need to stay updated about the latest martech in order to be competitive. As a business owner, this might be difficult. Hiring a marketing agency can solve this problem for you. They know of the latest marketing technologies and have expertise in the implementation.`]}
         />
       </div>
     </div>

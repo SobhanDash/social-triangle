@@ -26,7 +26,14 @@ const FaqContent = ({ title, description }: any) => {
         )}
       </div>
 
-      {isOpen && <p className={`mb-4 text-sm text-[#929494]`}>{description}</p>}
+      {isOpen &&
+        description.map((item: string, index: any) => {
+          return (
+            <p key={index} className={`mb-4 text-sm text-[#929494]`}>
+              {item}
+            </p>
+          );
+        })}
     </div>
   );
 };
