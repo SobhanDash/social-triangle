@@ -22,7 +22,7 @@ const TechStacks = () => {
       className={`relative h-auto w-full py-12 px-6 sm:px-12 md:px-20 bg-[#fff] z-[-1]`}
     >
       <div
-        className={`absolute bottom-[0px] md:bottom-[80px] left-0 xl1:left-[120px] z-[-1] invisible lg:visible`}
+        className={`absolute bottom-[0px] md:bottom-[80px] left-0 xl1:left-[120px] z-[-1] hidden lg:block`}
       >
         <div
           className={`relative h-[200px] w-[200px] md_link:h-[300px] md_link:w-[300px] lg1:h-[350px] lg1:w-[350px] -rotate-12`}
@@ -34,7 +34,7 @@ const TechStacks = () => {
       <div
         className={`absolute bottom-[400px] sm:bottom-[320px] md:bottom-[250px] md_link:bottom-[150px] xl1:bottom-[120px] 
       right-0 sm:right-[20px] md_link:right-0 xl1:right-[100px] z-[-1]
-      rotate-6 invisible lg:visible`}
+      rotate-6 hidden lg:block`}
       >
         <div
           className={`relative h-[250px] w-[250px] md_link:h-[320px] md_link:w-[320px] lg1:h-[400px] lg1:w-[400px] xl1:h-[450px] xl1:w-[450px] rotate-12`}
