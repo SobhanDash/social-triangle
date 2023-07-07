@@ -60,17 +60,17 @@ const Navbar = () => {
 
       <div
         className={`${showMenu ? "max-h-[170px] z-[1] opacity-1" : "max-h-0 z-[-1]"} 
-        w-full flex md_link:hidden flex-col justify-start items-start rounded-md transition-all`}
+        w-full flex md_link:hidden flex-col justify-start items-start gap-2 rounded-md transition-all`}
       >
         <Link
           href={`#`}
-          className={`p-2 hover:border-b border-b-[#5E17EB] transition-all`}
+          className={`p-2`}
         >
           HOME
         </Link>
         <Link
           href={`#`}
-          className={`p-2 hover:border-b border-b-[#5E17EB] transition-all`}
+          className={`p-2`}
         >
           ABOUT
         </Link>
