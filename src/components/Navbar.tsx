@@ -39,6 +39,7 @@ const Navbar = ({ scrollToLetsChat }: any) => {
             ABOUT
           </Link> */}
           <button
+            onClick={scrollToLetsChat}
             className={`py-2 px-4 border border-[#5E17EB] hover:bg-[#5E17EB] rounded-md transition-all`}
           >
             BOOK A CALL
