@@ -12,7 +12,7 @@ const Faqs = () => {
         Popularly Asked
       </p>
       <p
-        className={`mt-2 mb-6 text-2xl xs:text-3xl text-[#5E17EB] text-center xs:text-start font-bold`}
+        className={`mt-2 mb-6 text-2xl xs:text-3xl text-[#5E17EB] text-center xs:text-start font-bold drop-shadow-faqShadow`}
       >
         FAQs For Our Marketing Agency
       </p>
