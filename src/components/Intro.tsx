@@ -15,7 +15,7 @@ const Intro = ({letsChatRef}:any) => {
     <div className={`min-h-[80vh] w-full py-12 px-6 sm:px-12 md:px-20 text-white bg-mainBg`}>
       <Navbar scrollToLetsChat={scrollToLetsChat} />
       <div
-        className={`lg:h-[40vh] lg1:h-[45vh] xl1:h-[50vh] 
+        className={`h-full md_link:h-[40vh] lg:h-[45vh] xl1:h-[50vh] 
         w-full lg:w-[95%] xl1:w-[90%] mt-16 md_link:mt-10 mx-auto 
         grid grid-cols-12 gap-y-10 md_link:gap-x-20`}
       >
@@ -37,7 +37,7 @@ const Intro = ({letsChatRef}:any) => {
         </div>
 
         <div
-          className={`h-[35vh] xs:h-[40vh] sm:h-[50vh] md_link:h-full pt-4 px-4 col-span-12 md_link:col-span-6 flex justify-center items-center`}
+          className={`h-[40vh] xs:h-[50vh] sm:h-[60vh] md_link:h-full pt-4 px-4 col-span-12 md_link:col-span-6 flex justify-center items-center`}
         >
           <div
             className={`relative h-full w-full flex justify-center items-center rounded-2xl`}
