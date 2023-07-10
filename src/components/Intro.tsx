@@ -2,6 +2,8 @@
 
 import React from "react";
 import Navbar from "./Navbar";
+import socialImg from "../../public/assets/social_media.jpg";
+import Image from "next/image";
 
 const Intro = ({letsChatRef}:any) => {
   
@@ -38,9 +40,9 @@ const Intro = ({letsChatRef}:any) => {
           className={`h-[50vh] md_link:h-full pt-4 px-4 col-span-12 md_link:col-span-6 flex justify-center items-center`}
         >
           <div
-            className={`h-full w-full flex justify-center items-center bg-[#d9d9d9]`}
+            className={`relative h-full w-full flex justify-center items-center`}
           >
-            <p className={`text-black text-4xl font-semibold`}>Video Element</p>
+            <Image src={socialImg} alt="Social" fill />
           </div>
         </div>
       </div>
