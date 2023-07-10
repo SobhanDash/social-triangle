@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import socialMediaImg from "../../public/assets/socialMedia.jpg";
@@ -122,7 +122,7 @@ const TechStacks = () => {
           Partners & Tech Stacks
         </p>
         <p
-          className={`text-2xl xs:text-3xl sm:text-4xl text-center sm:text-start text-[#5e17eb] font-bold`}
+          className={`text-2xl xs:text-3xl sm:text-4xl text-center sm:text-start text-[#5e17eb] font-bold drop-shadow-faqShadow`}
         >
           Powerful Ecosystem
         </p>

@@ -39,7 +39,7 @@ module.exports = {
         industriesBg: "url(/assets/industriesBg.jpg)",
       },
       dropShadow: {
-        faqShadow: "0.15rem 0.15rem lightgray",
+        faqShadow: "0.1rem 0.2rem 0.1rem lightgrey",
       },
       boxShadow: {
         menuShadow: "0px 1px 2px 0px #9099ff",
