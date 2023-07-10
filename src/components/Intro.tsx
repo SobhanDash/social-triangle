@@ -37,7 +37,7 @@ const Intro = ({letsChatRef}:any) => {
         </div>
 
         <div
-          className={`h-[50vh] md_link:h-full pt-4 px-4 col-span-12 md_link:col-span-6 flex justify-center items-center`}
+          className={`h-[35vh] xs:h-[40vh] sm:h-[50vh] md_link:h-full pt-4 px-4 col-span-12 md_link:col-span-6 flex justify-center items-center`}
         >
           <div
             className={`relative h-full w-full flex justify-center items-center rounded-2xl`}
