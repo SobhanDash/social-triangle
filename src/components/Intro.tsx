@@ -40,9 +40,9 @@ const Intro = ({letsChatRef}:any) => {
           className={`h-[50vh] md_link:h-full pt-4 px-4 col-span-12 md_link:col-span-6 flex justify-center items-center`}
         >
           <div
-            className={`relative h-full w-full flex justify-center items-center`}
+            className={`relative h-full w-full flex justify-center items-center rounded-2xl`}
           >
-            <Image src={socialImg} alt="Social" fill />
+            <Image src={socialImg} alt="Social" fill className="rounded-2xl" />
           </div>
         </div>
       </div>
